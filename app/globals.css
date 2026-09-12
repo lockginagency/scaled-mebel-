@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0B0A08;
+  color: #EDE7DA;
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: #3E6BF0;
+  color: #EDE7DA;
+}
+
+/* thin ruled grain texture across the whole page, very subtle */
+.grain {
+  background-image: repeating-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.015) 0px,
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+.tick-line {
+  position: relative;
+}
+
+.tick-line::before,
+.tick-line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1px;
+  height: 8px;
+  background: #2B2519;
+  transform: translateY(-50%);
+}
+
+.tick-line::before {
+  left: 0;
+}
+
+.tick-line::after {
+  right: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #C9863F;
+  outline-offset: 3px;
+}
