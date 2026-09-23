@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Ruler from "@/components/Ruler";
 import CornerMarks from "@/components/CornerMarks";
+import LegalInfo from "@/components/LegalInfo";
 
 const TELEGRAM_LINK = "https://t.me/m/wKbL6yNmYTky";
 
@@ -271,6 +272,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <LegalInfo />
 
       <footer className="border-t border-line">
         <div className="mx-auto max-w-wrap px-6 md:px-10 py-8 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between text-[12px] text-mutedSolid">
